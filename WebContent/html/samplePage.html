@@ -1,0 +1,22 @@
+
+	<div>
+		<form name="f1">
+		<p>Email:<input type="email" name="emailAddress" ng-model="text" required></p>
+		<span ng-show="f1.emailAddress.$error.email"></span>
+		{{f1.emailAddress.$valid}}
+		{{f1.emailAddress.$dirty}}
+		{{f1.emailAddress.$touched}}
+		</form>
+		<h1>{{localTime}}</h1>
+		<p>FirstName: <input type="text" ng-model="person.firstName" ng-click="change()"></p>
+		<p>LastName: <input type="text" ng-model="person.lastName"></p>
+		<p>Color:<input type='text' ng-model="myCol"></p>
+		<label style="background-color:{{myCol}}">Sample Label</label>
+		<p>{{person.firstName+" "+person.lastName}} Selected car is {{selectedCar.name}} with price {{selectedCar.price}}</p>
+		<input type="text" ng-model="searchFilter">
+		<ul>
+			<li ng-repeat="x in result | orderBy: 'name' | filter : { 'name' : searchFilter}">
+				{{x.name}}
+			</li>
+		</ul>
+	</div>

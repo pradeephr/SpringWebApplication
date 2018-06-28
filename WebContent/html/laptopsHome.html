@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to </title>
+</head>
+<div style="margin-top:58px;">
+		<div class="row">
+			<div class="col-6" ng-repeat="item in laptops | filter : searchItem">
+				<div class="row">
+					<div class="col-6">
+						<div style="text-align:center">
+						<span>Brand : </span><label>{{item['laptopBrand']}}</label><br/>
+						<span>Model No : </span><label>{{item['modelNo']}}</label><br/>
+						<span>Processor : </span><label>{{item['processor']}}</label><br/>
+						<span>Screen Size : </span><label>{{item['screenSize']}}</label><br/>
+						<span>Price : </span><label>{{item['price']}}</label><br/>
+						</div>
+					</div>
+					<div class="col-6">
+						<img class='img-fluid' ng-src="{{item['laptopImg']}}" />
+					</div>
+				</div>
+			</div>
+		</div>		
+</div>
+</html>
